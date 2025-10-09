@@ -1,0 +1,47 @@
+header{
+    color: green
+}
+p{ 
+    font-family: cursive;
+} 
+.titulo{
+    color: red;
+    text-align: center;
+    font-size: 24px;
+}
+.conteiner{
+    background-color: yellow;
+    border: 2px solid blue;
+    padding: 10px;
+    margin: 15px;
+}
+.parrafo-esterilizado{
+    background-color: blue;
+    border: 3px solid red;
+    width: 920px;
+}
+.button{
+    background-color: green;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    width: 150px;
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+    background-color: green;
+    color: white;
+}
+.borde {
+    border: 2px solid black;
+}
+.fondo {
+    background-color: #ccc;
+}
+.redondeado {
+    border-radius: 15px;
+}
+.sombra {
+    box-shadow: 4px 4px 10px gray;
+}
