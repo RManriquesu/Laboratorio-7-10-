@@ -1,0 +1,17 @@
+.contenedor p::first-line{
+    background-color: purple;
+    color: white;
+}
+h1 + p{
+    background-color: aqua;
+    color: black;
+}
+p ~ p{
+    background-color: blue;
+    color: white;
+    width: 120px;
+}
+a{
+    background-color: black;
+    color: yellow;
+}

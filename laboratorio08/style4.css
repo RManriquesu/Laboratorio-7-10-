@@ -1,0 +1,22 @@
+ol li:nth-child(odd) {
+    background-color: #f0f0f0;
+}
+ol li:nth-child(even) {
+    background-color: #dcdcdc; 
+}
+li::before {
+    content: "==> ";
+}
+li:hover {
+    background-color: #c0c0c0; 
+    cursor: pointer;
+}
+.hecha::after {
+    content: " ✓";
+    color: green;
+    font-weight: bold;
+}
+a{
+    background-color: blue;
+    color: black;
+}
