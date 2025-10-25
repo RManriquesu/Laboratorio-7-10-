@@ -1,0 +1,162 @@
+.main-header {
+    background-color: var(--header-bg); 
+    color: var(--text-light);
+    display: flex;
+    justify-content: space-between; /* Logo a la izquierda, Nav a la derecha */
+    align-items: center;
+    padding: 20px 50px;
+    /* Centra el header y limita su ancho máximo */
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.main-header .logo a {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--text-light); 
+    letter-spacing: 1px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex; 
+}
+
+.main-nav ul li {
+    margin-left: 35px;
+}
+
+.main-nav ul li a {
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: 500;
+    padding: 5px 0;
+    color: var(--text-light);
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.main-nav ul li a.active,
+.main-nav ul li a:hover {
+    color: var(--hero-bg); 
+    border-bottom: 3px solid var(--hero-bg);
+}
+
+@media (max-width: 850px) {
+    .main-header {
+        flex-direction: column; 
+        align-items: flex-start; 
+        padding: 15px 20px;
+    }
+
+    .main-header .logo {
+        margin-bottom: 10px;
+    }
+
+    /* Hace que la lista de navegación ocupe todo el ancho */
+    .main-nav {
+        width: 100%;
+    }
+
+    /* Convierte el menú horizontal en vertical */
+    .main-nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .main-nav ul li {
+        /* Quita el margen lateral y usa el 100% del ancho disponible */
+        margin-left: 0; 
+        width: 100%;
+        text-align: left;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .main-nav ul li:last-child {
+        border-bottom: none;
+    }
+    
+    .main-nav ul li a {
+        display: block; /* Para que el área de clic sea más grande */
+        padding: 10px 0;
+        /* Asegura que el borde inferior se muestre correctamente */
+        border-bottom: none !important; 
+    }
+    
+    .main-nav ul li a:hover,
+    .main-nav ul li a.active {
+        background-color: rgba(255, 255, 255, 0.1); /* Sutil cambio de fondo en hover/activo */
+        color: var(--hero-bg);
+    }
+}
+.portfolio-grid-container {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; 
+    padding: 20px;
+}
+.project-card {
+    background-color: #ffffff;
+    border-radius: 10px; 
+    overflow: hidden; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Efecto de levantamiento */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagen del Proyecto */
+.project-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.project-card:hover img {
+    transform: scale(1.05); /* Efecto de zoom sutil al pasar el ratón */
+}
+
+/* Descripción del Proyecto (figcaption) */
+.project-card figcaption {
+    /* Modelo de Cajas: Padding interno */
+    padding: 20px; 
+    text-align: left;
+}
+
+.project-card h3 {
+    color: var(--text-dark);
+    margin-bottom: 5px;
+}
+
+.project-card p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Botón de la Tarjeta */
+.btn-project {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.85em;
+    font-weight: bold;
+}
+
+.btn-project:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 650px) {
+    /* Ajusta el padding general en móviles */
+    .portfolio-grid-container {
+        padding: 20px 10px;
+        gap: 20px;
+    }
+}

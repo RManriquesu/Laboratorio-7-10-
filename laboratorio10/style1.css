@@ -1,0 +1,131 @@
+:root {
+    --header-bg: #2c3e50;
+    --hero-bg: #4CAF50;    
+    --text-light: #ffffff;
+    --text-dark: #333333;
+    --font-family: 'Arial', sans-serif;
+}
+
+/* Reset Básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-dark);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; 
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s;
+}
+
+.main-header {
+    background-color: var(--header-bg);
+    color: var(--text-light);
+    /* Usamos Flexbox para organizar el logo y la navegación */
+    display: flex;
+    justify-content: flex-end; /* Mueve el nav hacia la derecha (como en la imagen) */
+    align-items: center;
+    padding: 15px 50px;
+}
+
+/* Ocultamos el logo en la parte superior para imitar el diseño
+   (aunque semánticamente es mejor dejarlo si fuera una web real) */
+.main-header .logo {
+    display: none; 
+}
+
+/* Navegación */
+.main-nav ul {
+    list-style: none;
+    display: flex; /* Flexbox para colocar los ítems horizontalmente */
+}
+
+.main-nav ul li {
+    margin-left: 25px;
+}
+
+.main-nav ul li a {
+    text-transform: uppercase;
+    font-size: 0.9em;
+    padding: 5px 0;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a.active {
+    color: #a2d9a2; /* Tono verde claro al pasar el ratón */
+}
+main {
+    flex-grow: 1; /* Permite que el contenido ocupe el espacio restante */
+}
+
+.hero {
+    background-color: var(--hero-bg);
+    color: var(--text-light);
+    text-align: center;
+    min-height: 350px;
+    
+    /* Flexbox para centrar el contenido (título, párrafo, botón) */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 2.8em;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.btn-cta {
+    background-color: #2196F3; /* Color de botón contrastante */
+    color: var(--text-light);
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-cta:hover {
+    background-color: #0b7dda;
+}
+
+@media (max-width: 650px) {
+    /* En pantallas pequeñas, apilar los ítems del menú */
+    .main-header {
+        justify-content: center; /* Centra el menú */
+        padding: 15px 20px;
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-nav ul li {
+        margin: 5px 0;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+}
